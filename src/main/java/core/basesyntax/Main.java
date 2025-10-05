@@ -7,13 +7,15 @@ package core.basesyntax;
 public class Main {
     public static void main(String[] args) {
         FigureSupplier supplier = new FigureSupplier();
-        int a = 6;
-        Figure[] figures = new Figure[a];
-        int half = a / 2;
-        for (int i = 0; i < half; i++) {
+        final int FIGURES_COUNT = 6;
+        final int HALF = FIGURES_COUNT / 2;
+
+        Figure[] figures = new Figure[FIGURES_COUNT];
+
+        for (int i = 0; i < HALF; i++) {
             figures[i] = supplier.getRandomFigure();
         }
-        for (int i = 0; i < a; i++) {
+        for (int i = 0; i < FIGURES_COUNT; i++) {
             figures[i] = supplier.getDefaultFigure();
         }
         for (Figure f : figures) {
