@@ -1,5 +1,8 @@
 package core.basesyntax;
 
+import static core.basesyntax.FigureConstants.FIGURES_COUNT;
+import static core.basesyntax.FigureConstants.HALF;
+
 /**
  * Feel free to remove this class and create your own.
  */
@@ -7,8 +10,6 @@ package core.basesyntax;
 public class Main {
     public static void main(String[] args) {
         FigureSupplier supplier = new FigureSupplier();
-        final int FIGURES_COUNT = 6;
-        final int HALF = FIGURES_COUNT / 2;
 
         Figure[] figures = new Figure[FIGURES_COUNT];
 

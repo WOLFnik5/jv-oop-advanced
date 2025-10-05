@@ -1,16 +1,12 @@
 package core.basesyntax;
 
+import static core.basesyntax.FigureConstants.FIGURE_TYPES;
+import static core.basesyntax.FigureConstants.SIZE_MAX;
+import static core.basesyntax.FigureConstants.SIZE_MIN;
+
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURES_COUNT = 6;
-    public static final int FIGURE_TYPES = 5;
-    public static final double SIZE_MIN = 1.0;
-    public static final double SIZE_MAX = 20.0;
-    public static final double DEFAULT_RADIUS = 10.0;
-    public static final double TRAPEZOID_DELTA = 1.0;
-    public static final int HALF = FIGURES_COUNT / 2;
-
 
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
@@ -51,7 +47,9 @@ public class FigureSupplier {
     private double randomSize() {
         return SIZE_MIN + random.nextDouble() * (SIZE_MAX - SIZE_MIN);
     }
+
     private int randomType() {
+
         return random.nextInt(FIGURE_TYPES);
     }
 }
