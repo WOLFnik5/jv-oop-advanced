@@ -7,7 +7,6 @@ import static core.basesyntax.FigureConstants.SIZE_MIN;
 import java.util.Random;
 
 public class FigureSupplier {
-
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
